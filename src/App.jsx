@@ -1,4 +1,5 @@
 import Banner from "./components/Banner"
+import Footer from "./components/Footer"
 import Home  from "./components/Home"
 import Main from "./components/Main"
 import Navbar from "./components/Navbar"
@@ -17,6 +18,7 @@ function App() {
       <div className="md:mx-[416px] mx-4 md:mt-36 mt-16">
         <Main />
       </div>
+      <Footer />
     </div>
   )
 }

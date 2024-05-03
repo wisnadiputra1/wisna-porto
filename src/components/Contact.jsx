@@ -53,11 +53,21 @@ const Contact = () => {
       </div>
       </div>
 
-      <div>
-            <div>
-              <img src={vector} alt="" className='w-[250px' />
-            </div>
-        
+      <div className='space-y-10'>
+        <div>
+          <img src={vector} alt="" className='w-[250px' />
+        </div>
+        <div>
+          <div className='bg-secondary rounded-md'>
+            <form className='py-1 flex flex-col items-center justify-center gap-3'>
+              <h2 className='font-semibold'>Send An Email</h2>
+                <input type="text" placeholder='Name' className='rounded-md px-2 w-[330px] py-2 focus:outline-sky-600' />
+                <input type="email" placeholder='E-mail' className='rounded-md px-2 w-[330px] py-2' />
+                <textarea name="Message" id="msg" placeholder='Type message here..' className='rounded-md px-2 py-2 w-[330px] h-36'></textarea>
+                <button type='submit' className='bg-black text-white px-10 py-1 rounded-full'>Send</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   )

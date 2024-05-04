@@ -7,6 +7,35 @@ import icon5 from '../assets/icon/nextdotjs.svg'
 import icon6 from '../assets/icon/figma.svg'
 
 const Skills = () => {
+
+    const listOfSkills = [
+        {
+            title : 'React',
+            icon : icon1
+        },
+        {
+            title : 'Typescript',
+            icon : icon2
+        },
+        {
+            title : 'Tailwindcss',
+            icon : icon3
+        },
+        {
+            title : 'Git',
+            icon : icon4
+        },
+        {
+            title : 'Next.JS',
+            icon : icon5
+        },
+        {
+            title : 'Figma',
+            icon : icon6
+        }
+    ]
+
+
   return (
     <div className=" font-Kanit dark:text-white md:grid md:grid-cols-2 md:gap-10" id='Skills'>
         <div className='flex flex-col gap-5 md:gap-10'>
@@ -15,30 +44,14 @@ const Skills = () => {
             <div className='mt-24 flex flex-col gap-10'>
                 <h2 className='font-bold text-xl md:text-2xl'>Skills</h2>
                 <ul className='flex w-full flex-wrap gap-8 items-center justify-center md:justify-normal text-center text-sm font-medium md:w-[400px] md:gap-16 '>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon1} alt="React" /></li>
-                        <p>React</p>
-                    </div>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max' >
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon2} alt="Typescript" /></li>
-                        <p>Typescript</p>
-                    </div>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon3} alt="Tailwindcss" /></li>
-                        <p>Tailwind</p>
-                    </div>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon4} alt="Git" /></li>
-                        <p>Git</p>
-                    </div>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon5} alt="Next.JS" /></li>
-                        <p>Next.JS</p>
-                    </div>
-                    <div className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
-                    <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={icon6} alt="Figma" /></li>
-                        <p>Figma</p>
-                    </div> 
+                    {
+                        listOfSkills && listOfSkills.length > 0 ? listOfSkills.map((skill, index) => (
+                            <div key={index} className='hover:scale-105 hover:translate-y-1 duration-300 drop-shadow-lg w-max'>
+                            <li className='bg-secondary w-[68px] h-[68px] flex items-center justify-center rounded-full '><img className='w-8' src={skill.icon} alt="React" /></li>
+                                <p>{skill.title}</p>
+                            </div>
+                        )) : <p>Data is missing!</p>
+                    }
                 </ul>
             </div>
             
@@ -64,7 +77,6 @@ const Skills = () => {
             <div className='flex items-center justify-center mt-20'>
                 <img src={vector} alt="Skills" className='w-[250px] md:w-full' />
             </div>
-            
         </div>
     </div>
   )

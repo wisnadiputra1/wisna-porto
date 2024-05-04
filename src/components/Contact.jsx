@@ -26,7 +26,7 @@ const Contact = () => {
   ]
   
   return (
-    <div className='font-Kanit mt-16 flex flex-col gap-20 md:grid md grid-cols-2'>
+    <div className='font-Kanit mt-16 flex flex-col gap-20 md:grid md grid-cols-2' id='Contact'>
       <div className='space-y-16'>
         <div className='space-y-6'>
             <h2 className='text-5xl font-bold'>{"Let's Keep Connect"}</h2>
@@ -49,7 +49,7 @@ const Contact = () => {
 
         <div className='flex flex-col gap-6'>
           <h3 className='text-5xl font-bold md:text-5xl'>Get In Touch With Us</h3>
-          <p className='text-text-main md:text-2xl'>Feel free to contact us for collaboration opportunities or freelance work. We're open to exciting projects and look forward to hearing from you!</p>
+          <p className='text-text-main md:text-2xl'>{"Feel free to contact us for collaboration opportunities or freelance work. We're open to exciting projects and look forward to hearing from you!"}</p>
         </div>
       </div>
 

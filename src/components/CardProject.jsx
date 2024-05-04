@@ -10,7 +10,7 @@ const CardProject = ({ card, title, desc, tool }) => {
             <div className='flex items-center justify-center gap-4 md:gap-8 text-center w-max mx-2 my-2'>
               {
                   // eslint-disable-next-line react/prop-types
-                  tool && tool.length != 0 ? tool.map((item, idx) => (
+                  tool && tool.length > 0 ? tool.map((item, idx) => (
                       <div key={idx} className='bg-secondary h-5 md:h-8 text-xs md:flex md:items-center drop-shadow-lg rounded-md w-[82px] hover:scale-105'><p className="w-full">{item}</p></div>
                   )) : null
               }

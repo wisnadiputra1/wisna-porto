@@ -41,8 +41,6 @@ const Navbar = () => {
         }
     }
 
-    
-
   return (
     <div id='nav' className={`grid grid-cols-2 py-4 font-Kanit w-full ${fixed ? 'navbar-fixed top-0 left-0 right-0 px-4 md:px-[416px]' : ''} dark:text-white`}>
         <div className='flex items-center justify-between '>

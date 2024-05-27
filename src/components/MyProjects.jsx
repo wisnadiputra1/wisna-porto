@@ -20,7 +20,7 @@ const MyProjects = () => {
 
     {
       title : 'Landing Page Company',
-      desc : 'Landing Page Company is a landing page for company. This landing page project was undertaken to practice and enhance my basic skills in implementing HTML, CSS, and JavaScript.',
+      desc : 'Landing Page Company is a landing page project that was undertaken to practice and enhance my basic skills in implementing HTML, CSS, and JavaScript.',
       tools : [
         'HTML', 'CSS', 'JavaScript', 'Replit'
       ],

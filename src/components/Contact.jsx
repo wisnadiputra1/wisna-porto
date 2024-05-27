@@ -9,19 +9,23 @@ const Contact = () => {
   const listSocialMedia = [
     {
       icon : iconGithub,
-      text : 'GitHub'
+      text : 'GitHub',
+      link : 'https://github.com/wisnadiputra1'
     },
     {
       icon : iconLinkedIn,
-      text : 'LinkedIn'
+      text : 'LinkedIn',
+      link : 'https://www.linkedin.com/in/i-ketut-wisnadiputra/'
     },
     {
       icon : iconGmail,
-      text : 'Gmail'
+      text : 'Gmail',
+      link : 'mailto:wisnadiputra8@gmail.com'
     },
     {
       icon : iconInstagram,
-      text : 'Instagram'
+      text : 'Instagram',
+      link : 'https://www.instagram.com/wisna___'
     }
   ]
   
@@ -37,10 +41,11 @@ const Contact = () => {
           <ul className='w-full md:w-[90%] flex flex-wrap gap-x-28 gap-y-8 justify-center items-center md:justify-start'>
             {
               listSocialMedia.length > 0 ? listSocialMedia.map((item) => {
-              return <div key={item.text}>
+              return <a href={item.link} key={item.text}>
                   <li className='bg-secondary h-[68px] w-[68px] rounded-full flex items-center justify-center'><img src={item.icon} alt="" className='w-8' /></li>
                   <p className='text-center font font-semibold'>{item.text}</p>
-                </div>
+              </a>
+              
               })
               : <p>cannot load data</p>
             }

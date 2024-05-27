@@ -10,7 +10,7 @@ const MyProjects = () => {
   const listText = [
     {
       title : 'Anime List Web App',
-      desc : 'Below are several projects that I have worked on while entering the world of Front-End Engineering & Web Design',
+      desc : 'Anime Online.id is a website that features a list of anime, connected to the Jikan API. Anime-Online.id was built with the aim of practicing and implementing an understanding of React.JS. ',
       tools : [
         'React', 'Api', 'TailwindCSS', 'Vercel'
       ],
@@ -20,7 +20,7 @@ const MyProjects = () => {
 
     {
       title : 'Landing Page Company',
-      desc : 'Below are several projects that I have worked on while entering the world of Front-End Engineering & Web Design',
+      desc : 'Landing Page Company is a landing page for company. This landing page project was undertaken to practice and enhance my basic skills in implementing HTML, CSS, and JavaScript.',
       tools : [
         'HTML', 'CSS', 'JavaScript', 'Replit'
       ],
@@ -30,7 +30,7 @@ const MyProjects = () => {
 
     {
       title : 'PoseCam Filter App',
-      desc : 'Below are several projects that I have worked on while entering the world of Front-End Engineering & Web Design',
+      desc : 'PoseCam is a camera filter app integrated with trained machine learning models. PoseCam is built using Python and developed to finish the final exam of Intelligent Systems Applications course.',
       tools : [
         'Python', 'Streamlit', 'TensorFlow', 'Roboflow'
       ],
@@ -38,7 +38,6 @@ const MyProjects = () => {
       url : 'https://github.com/ekawirawan/hand-pose-recognition'
     }
   ]
-
 
   return (
     <div className='font-Kanit mt-8 flex flex-col gap-8 md:mt-20' id='Projects'>

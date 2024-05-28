@@ -19,38 +19,63 @@ const Navbar = () => {
                 setFixed(false)
             }
         }
-       window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll)
     },[])
     
+    useEffect(() => {
+        const themeSaved = localStorage.getItem('theme')
+        if(themeSaved === 'dark'){
+            setIsActive(true)
+            html.classList.add(themeSaved)
+        }
+    
+    },[])
 
-   const handleToggle = () => {
-      setActive(true);
+    const handleToggle = () => {
+        setActive(true);
     }
 
     const handleToggleOff = () => {
         setActive(false);
     }
 
+
+
     const handleTheme = () => {
         if(isActive === true){
             setIsActive(false)
             html.classList.remove('dark')
+            localStorage.removeItem('theme', 'dark')
         }else{
             setIsActive(true)
             html.classList.add('dark')
+            localStorage.setItem('theme', 'dark')
         }
     }
 
-  return (
+    const handleScroll = (e, id) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleCombined = (e, id) => {
+        handleScroll(e, id);
+        handleToggleOff();
+    }
+
+   return (
     <div id='nav' className={`grid grid-cols-2 py-4 font-Kanit w-full ${fixed ? 'navbar-fixed top-0 left-0 right-0 px-4 md:px-[416px]' : ''} dark:text-white`}>
         <div className='flex items-center justify-between '>
             <h2 className='font-bold text-[24px] ' >Wisna</h2>
             <ul className={`flex md:items-center md:translate-x-0 md:relative  md:h-full h-screen w-1/2 md:w-max md:bg-transparent bg-white dark:bg-black md:drop-shadow-none drop-shadow-lg md:justify-around justify-around items-center md:space-x-8 md:flex-row flex-col absolute md:z-0 z-20 top-0 right-0 md:top-0 md:right-auto duration-1000 md:duration-0 ${active ? 'translate-x-0' : 'translate-x-[100%] '}`}>
                 <button type='button' className='block md:hidden'><X onClick={handleToggleOff} /></button>
-                <a href="#Home" onClick={handleToggleOff}><li>Home</li></a>
-                <a href="#Skills" onClick={handleToggleOff}><li>Skills</li></a>
-                <a href="#Projects" onClick={handleToggleOff}><li>Projects</li></a>
-                <a href="#Contact" onClick={handleToggleOff}><li>Contact</li></a>
+                <a href="#Home" onClick={(e) => handleCombined(e, 'Home')}><li>Home</li></a>
+                <a href="#Skills" onClick={(e) => handleCombined(e, 'Skills')}><li>Skills</li></a>
+                <a href="#Projects" onClick={(e) => handleCombined(e, 'Projects')}><li>Projects</li></a>
+                <a href="#Contact" onClick={(e) => handleCombined(e, 'Contact')}><li>Contact</li></a>
                 
             </ul>
         </div>

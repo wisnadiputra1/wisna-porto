@@ -66,7 +66,7 @@ const Skills = () => {
                         <p className='text-text-main'>(March - June)</p>
                     </div>
                     <div>
-                        <h3>Front-End Engineering</h3>
+                        <h3>Front-End Engineer</h3>
                         <p className='text-text-main'>BTW Edutech</p>
                     </div>
                 </div>
